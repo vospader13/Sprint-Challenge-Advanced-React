@@ -31,3 +31,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+.dark-mode {
+  color: #0bb0fc;
+  background: #022e3b;
+}
+
+.playercard{
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  background: #52398d;
+  border-radius: 7px;
+}
+
+.player-list{
+  display:flex;
+  flex-wrap: wrap;
+  width:100%;
+  
+  justify-content: center;
+}
