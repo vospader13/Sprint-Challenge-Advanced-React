@@ -1,21 +1,30 @@
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
+import { render } from '@testing-library/react';
 import App from './App';
-
+// 
 it('renders without crashing', () => {
   
-    render(<App />);
+  render(<App />);
+  
 });
 
 
 
 describe('player list component', () => {
   it('renders without crashing', () => {
-  //    functionsum(sum(2,2).toBe(4))
-
-  const sum = (a,b) => {
+   const sum = (a,b) => {
       return a+b;
   }
   expect(sum(2,2)).toBe(4)
   })
+})
+
+
+test('is dark mode working', () => {
+  const darkmodeBtn = getByText('Dark Mode');
+  const darkModeOn = getByText('Dark mode on!')
+
+  fireEvent.cleck(darkmodeBtn);
+
+  expect(darkModeOn).hasTextContent();
 })
